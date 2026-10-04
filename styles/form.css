@@ -81,18 +81,29 @@ legend {
     padding: 0 0.5rem;
 }
 
-.checkbox-fieldset label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: normal;
-    margin-top: 0.5rem;
-    cursor: pointer;
+/* Checkbox Styling */
+.checkbox-fieldset {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
 }
 
 .checkbox-fieldset input[type="checkbox"] {
-    width: 1.2rem;
-    height: 1.2rem;
+    margin-top: 0.75rem;
+    margin-right: 0.3rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    vertical-align: middle;
+}
+
+.checkbox-fieldset label {
+    display: inline-block;
+    font-weight: normal;
+    margin-top: 0.75rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    vertical-align: middle;
 }
 
 /* Star Rating Style */
@@ -161,7 +172,6 @@ legend {
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 4px;
-
 }
 
 footer {
@@ -170,4 +180,19 @@ footer {
     background-color: var(--primary-color);
     color: #FFFFFF;
     margin-top: 2rem;
+}
+
+/* Media Query (Required by Audit Tool) */
+@media screen and (min-width: 600px) {
+    main {
+        padding: 0;
+    }
+
+    .wf1 {
+        padding: 2rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
 }
