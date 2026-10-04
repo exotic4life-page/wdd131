@@ -1,0 +1,343 @@
+:root {
+    --primary-color: #1B365D;
+    --secondary-color: #008080;
+    --accent-color: #FFB400;
+    --bg-color: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --text-color: #222222;
+    --border-color: #E0E0E0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo a {
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+
+nav a.active,
+nav a:hover {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #006666;
+}
+
+/* Features Grid */
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Desktop & Tablet Layout (Responsive Media Query) */
+@media screen and (min-width: 650px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        margin-top: 0;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Catalog Styles */
+.catalog-main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.catalog-intro {
+    margin-bottom: 1.5rem;
+    color: #555555;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background-color: #E0E0E0;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.catalog-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catalog-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+}
+
+.badge.beginner {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.badge.advanced {
+    background-color: #FFF3E0;
+    color: #EF6C00;
+}
+
+/* Tablet & Desktop Responsive Layout for Catalog */
+@media screen and (min-width: 700px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .catalog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Form Page Styles */
+.form-main {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.form-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-container h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-container p {
+    color: #555555;
+    margin-bottom: 1.5rem;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.3srem;
+    color: var(--text-color);
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.required {
+    color: #D32F2F;
+}
+
+.checkbox-fieldset {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1.2rem;
+}
+
+.checkbox-fieldset legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+.checkbox-fieldset input[type="checkbox"] {
+    margin-right: 0.4rem;
+    margin-top: 0.5rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    vertical-align: middle;
+}
+
+.checkbox-fieldset label {
+    display: inline-block;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    border: none;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #006666;
+}
+
+.counter-display {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}

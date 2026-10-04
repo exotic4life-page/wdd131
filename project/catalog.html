@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - DevCraft Hub</title>
+    <meta name="description" content="Browse DevCraft Hub resources, tutorials, and project tools dynamically populated via JavaScript.">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">DevCraft Hub</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html" class="active">Catalog</a></li>
+                <li><a href="form.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="catalog-main">
+        <h1>Resource Catalog</h1>
+        <p class="catalog-intro">Explore our curated collection of web development modules. Filter by category or view all available tools.</p>
+
+        <!-- Filter Buttons (DOM Interaction & Event Listeners) -->
+        <div class="filter-buttons">
+            <button id="all" class="filter-btn active">All Resources</button>
+            <button id="beginner" class="filter-btn">Beginner</button>
+            <button id="advanced" class="filter-btn">Advanced</button>
+        </div>
+
+        <!-- Dynamic Container where JS renders array data using template literals -->
+        <div id="catalog-container" class="catalog-grid">
+            <!-- JavaScript will populate items here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DevCraft Hub | WDD 131 Final Project | <a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>
